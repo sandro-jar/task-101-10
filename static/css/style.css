@@ -1,0 +1,279 @@
+section {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+body {
+  background-color: black;
+}
+
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 10px 90px,
+    red,
+    #d5ff74,
+    rgb(12, 226, 241)
+  );
+  top: 400px;
+  left: 500px;
+  opacity: 80%;
+}
+.wall-2 {
+  position: relative;
+  width: 47px;
+  height: 188px;
+  background: radial-gradient(
+    farthest-corner at 70px 40px,
+    rgb(243, 95, 119) 0%,
+    rgb(145, 255, 0) 100%
+  );
+  border-radius: 20px 5px 5px 20px;
+  top: 100px;
+  left: 1000px;
+}
+.wall {
+  position: relative;
+  width: 47px;
+  height: 188px;
+  background: radial-gradient(
+    farthest-corner at 70px 40px,
+    rgba(13, 255, 195, 0.966) 0%,
+    rgb(138, 40, 100) 100%
+  );
+  border-radius: 5px 20px 20px 5px;
+  top: 100px;
+  left: 100px;
+}
+.ball-animation {
+  animation-name: move-ball;
+  animation-duration: 9s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+.wall-2-animation {
+  animation-iteration-count: 1;
+  animation-duration: 9s;
+  animation-name: wall-move;
+}
+
+.wall-animation {
+  animation-iteration-count: 1;
+  animation-duration: 9s;
+  animation-name: wall-1-move;
+}
+@keyframes wall-move {
+  0% {
+    top: 100px;
+  }
+
+  50% {
+    top: 700px;
+    background: radial-gradient(
+      farthest-corner at 10px 90px,
+      rgb(243, 95, 119) 0%,
+      rgb(145, 255, 0) 100%
+    );
+  }
+  60% {
+    top: 500px;
+  }
+  65% {
+    top: 400px;
+  }
+  75% {
+    top: 700px;
+    background: radial-gradient(
+      farthest-corner at 10px 90px,
+      rgb(243, 95, 119) 0%,
+      rgb(145, 255, 0) 100%
+    );
+  }
+  78% {
+    top: 300px;
+  }
+  80% {
+    top: 500px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+
+@keyframes wall-1-move {
+  0% {
+    top: 100px;
+    background: radial-gradient(
+      farthest-corner at 10px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  10% {
+    top: 300px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  25% {
+    top: 500px;
+    background: radial-gradient(
+      farthest-corner at 10px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  30% {
+    top: 500px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  50% {
+    top: 700px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  60% {
+    top: 500px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  70% {
+    top: 300px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  75% {
+    top: 600px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  80% {
+    top: 500px;
+    background: radial-gradient(
+      farthest-corner at 70px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+  100% {
+    top: 600px;
+    background: radial-gradient(
+      farthest-corner at 10px 40px,
+      rgba(13, 255, 195, 0.966) 0%,
+      rgb(138, 40, 100) 100%
+    );
+  }
+}
+@keyframes move-ball {
+  0% {
+    top: 100px;
+    left: 400px;
+    transform: rotate(3turn);
+  }
+  10% {
+  }
+  25% {
+    top: 500px;
+    left: 1150px;
+  }
+
+  50% {
+    top: 700px;
+    left: 400px;
+  }
+  75% {
+    top: 800px;
+    left: 1150px;
+  }
+  80% {
+    top: 600px;
+    left: 400px;
+  }
+  100% {
+    touch-action: 600px;
+    left: 1400px;
+  }
+}
+body {
+  background: rgb(4, 32, 75);
+  background: radial-gradient(circle, rgb(1, 20, 117) 0%, rgb(0, 0, 0) 100%);
+}
+section {
+  width: 1440px;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+  margin: 11px 0px 0px 400px;
+  font-family: "Press Start 2P", cursive;
+  background-color: blueviolet;
+  color: #13c403;
+  font-size: 25px;
+  padding: 45px;
+  box-shadow: 0 9px rgba(83, 86, 255, 0.411);
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+}
+button:hover {
+  font-family: "Press Start 2P", cursive;
+  background-color: rgb(77, 4, 119);
+  border: 0.5px solid snow;
+  color: #b3ff00;
+}
+button:active {
+  color: #eeff00;
+  background-color: #d10034;
+  box-shadow: 0 5px rgb(0, 11, 24);
+  transform: translateY(1px);
+}
+
+.result {
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  font-size: 55px;
+  padding: 100px;
+  border-radius: 30%;
+  background-color: #d10034;
+  color: #d5ff74;
+  top: 241px;
+  left: 538px;
+  opacity: 0;
+}
+.result-animation {
+  animation-name: result;
+  animation-iteration-count: 1;
+  animation-duration: 0.8s;
+  animation-delay: 8s;
+}
+@keyframes result {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
